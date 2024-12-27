@@ -1,6 +1,7 @@
  
 from apiMethods import *
 from playstyleCalcMethods import *
+from champData.champTagsDic import champ_to_playstyle
 import os
 import asyncio
  
@@ -14,10 +15,25 @@ async def main():
     masteries = await get_masteries(puuid, api_key)
     
     print(masteries)
-    #   for champion in masteries:
-    #       print(f"Champion ID: {champion['championId']}, Mastery Points: {champion['championPoints']}")
+    for champion in masteries:
+        print(f"Champion ID: {champion['championId']}, Mastery Points: {champion['championPoints']}")
+        
+    champIDs = []
+    for champion in masteries:
+         champIDs.append(champion['championId'])
+    print(champIDs)
+
+    arg = getListChampIDs(masteries)
+    print(arg)
+
+    arg2 = getListChampNames(arg)
+    print(arg2)
     
-    
+    arg3 = tally_tags(arg2, champ_to_playstyle)    
+    print(arg3)
+
+    arg4 = calculate_tag_percentages(arg3, 5)
+    print(arg4)
 
     
 

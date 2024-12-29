@@ -29,11 +29,19 @@ async def main():
     arg2 = getListChampNames(arg)
     print(arg2)
     
-    arg3 = tally_tags(arg2, champ_to_playstyle)    
+     
+    champs_and_masteries = getChampNames_AND_masteries(masteries)
+    print(champs_and_masteries)
+
+    arg3 = tally_tags(champs_and_masteries, champ_to_playstyle)
     print(arg3)
 
-    arg4 = calculate_tag_percentages(arg3, 5)
+    arg4 = calculate_tag_percentages(arg3)
     print(arg4)
+
+    arg5 = generate_playstyle_summary(arg4)
+    print(arg5)
+
 
     
 

@@ -13,7 +13,7 @@ async def get_puuid(ingameName=None, tagLine=None, api_key=None):
 
 # Returns champion mastery info of inputted user in form of json file
 async def get_masteries(puuid=None, api_key=None):
-    count = 5
+    count = 8
 
     link = f'https://na1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/{puuid}/top?count={count}&api_key={api_key}'
      

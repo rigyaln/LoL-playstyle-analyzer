@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/styles.css">
+    <script src="../static/scripts/script.js" defer></script>
+    <title>LoL Playstyle Analyzer</title>
+</head>
+<body>
+    <h1>LoL Playstyle Analyzer</h1>
+    <div id="playstyle-result" style="display: none;">
+        <h2>Your Playstyle Result:</h2>
+        <p id="result-text"></p>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <div id="input-form">
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required> 
+            <label for="tagline">Tagline:</label>
+            <input type="text" id="tagline" name="tagline" required> 
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

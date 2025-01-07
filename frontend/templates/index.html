@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles/styles.css">
     <script src="../static/scripts/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>LoL Playstyle Analyzer</title>
 </head>
 <body>
     <h1>LoL Playstyle Analyzer</h1>
     <div id="playstyle-result" style="display: none;">
+        
         <h2>Your Playstyle Result:</h2>
+
         <p id="result-text"></p>
-        <button onclick="goBack()">Go Back</button>
+
+        <canvas id="playstyleChart" width="400" height="400"></canvas>
+
+        <button onclick="goBack()" id="goBack">Go Back</button>
     </div>
 
     <div id="input-form">

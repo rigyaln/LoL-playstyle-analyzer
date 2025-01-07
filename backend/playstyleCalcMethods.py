@@ -31,7 +31,7 @@ def generate_playstyle_summary(tag_percentages):
     sorted_tags = sorted(tag_percentages.items(), key=lambda x: x[1], reverse=True)
     top_tag, top_percentage = sorted_tags[0]
     
-    return f"Overall your playstyle has been best described as: {top_tag} - About ~{top_percentage}% of your top champ pool are contrived of heavily {top_tag.lower()} champions."
+    return f"Overall your playstyle has been best described as: {top_tag} - About ~{top_percentage}% of your top champ pool are contrived of {top_tag.lower()} champions."
 
 def getListChampIDs(masteries=None):
     champIDs = []
